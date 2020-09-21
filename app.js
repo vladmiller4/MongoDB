@@ -7,12 +7,14 @@ const { articleTask1, articleTask2, articleTask3, articleTask4, articleTask5 } =
 const connection = require('./config/connection');
 let usersCollection;
 let articlesCollection;
+let studentsCollection;
 run();
 
 async function run() {
   await connection.connect();
   await usersTask();
   await articlesTask();
+  await studentsTask();
   await connection.close();
 }
 
@@ -35,3 +37,8 @@ async function articlesTask() {
   await articleTask5(articlesCollection);
 }
 
+async function studentsTask() {
+  studentsCollection = connection.get().collection('students');
+  const students = require('./students.json');
+  await studentsCollection.insertMany(students);
+}
