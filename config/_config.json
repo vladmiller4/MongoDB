@@ -1,0 +1,21 @@
+{
+  "test": {
+    "database": "mongodb+srv://user:user@cluster0.gnird.mongodb.net/TaskHW?retryWrites=true&w=majority",
+    "dbName": "TaskHW",
+    "dbConfig": {
+      "useUnifiedTopology": true,
+      "useNewUrlParser": true
+    },
+    "seed": false,
+    "debug": true
+  },
+  "local": {
+    "database": "mongodb+srv://user:user@cluster0.gnird.mongodb.net/TaskHW?retryWrites=true&w=majority",
+    "dbName": "TaskHW",
+    "seed": true,
+    "dbConfig": {
+      "useUnifiedTopology": true,
+      "useNewUrlParser": true
+    }
+  }
+}
